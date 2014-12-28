@@ -1,0 +1,4 @@
+awesome-wm is the config file required for Awesome WM.
+
+Files:
+rc.lua: Main config file for Awesome WM
