@@ -47,7 +47,7 @@ terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 editor_cmd = terminal .. " -e " .. editor
-browser = "chormium"
+browser = "chromium"
 filemgr = "nautilus"
 msg = "notify-send"
 
@@ -282,7 +282,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Custom
-    awful.key({ modkey,           }, "e",     function () awful.util.spawn("nautilus") end),
+    awful.key({ modkey,           }, "e",     function () awful.util.spawn(filemgr) end),
+    awful.key({ modkey,           }, "c",     function () awful.util.spawn(browser) end),
+    awful.key({ modkey,           }, "g",     function () awful.util.spawn("gedit") end),
     awful.key({                   }, "Print", function () awful.util.spawn("gnome-screenshot -i") end),   
     awful.key({ modkey, "Shift"   }, "Left",  function () awful.util.spawn("xmms2 prev") end),
     awful.key({                   }, "XF86AudioPrev",  function () awful.util.spawn("xmms2 prev") end),
