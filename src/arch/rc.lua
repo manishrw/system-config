@@ -198,6 +198,9 @@ for s = 1, screen.count() do
     -- Create Volume widget
     volume_widget = wibox.widget.textbox()
 
+    -- Create Net Status widget
+    net_widget = wibox.widget.textbox()
+
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
 
@@ -210,6 +213,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(net_widget)
     right_layout:add(volume_widget)
     right_layout:add(battery_widget)
     right_layout:add(mytextclock)
@@ -583,6 +587,19 @@ end
  
 update_volume(volume_widget)
  
-mytimer = timer({ timeout = 1 })
-mytimer:connect_signal("timeout", function () update_volume(volume_widget) end)
-mytimer:start()
+vol_timer = timer({ timeout = 1 })
+vol_timer:connect_signal("timeout", function () update_volume(volume_widget) end)
+vol_timer:start()
+
+function update_netstatus(widget)
+	local fd = io.popen("~/.config/awesome/net_test")
+	local status = fd:read()
+	fd:close()
+
+	widget:set_markup(status .. " |")
+end
+
+update_netstatus(net_widget)
+net_timer = timer({ timeout = 5 })
+net_timer:connect_signal("timeout", function () update_netstatus(net_widget) end)
+net_timer:start()
