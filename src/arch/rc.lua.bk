@@ -10,7 +10,8 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-
+-- Custom requires
+-- require("volume")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -44,6 +45,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
+editor_cmd = terminal .. " -e " .. editor
 editor_cmd = terminal .. " -e " .. editor
 browser = "chromium"
 filemgr = "nautilus"
@@ -100,30 +102,14 @@ myawesomemenu = {
    { "Preferences", "gnome-control-center" },
    { "Screenshot",  "gnome-screenshot -i" },
    { "manual", terminal .. " -e man awesome" },
+   { "Lock",        "gnome-screensaver-command --lock" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
-}
-
-mysystemmenu = {
-   { "Lock",        "dm-tool lock" },
-   { "Suspend",	    "sudo pm-suspend" },
-   { "Hibernate",   "sudo pm-suspend-hybrid" },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
 
-myappsmenu = {
-   { "Chromium", browser },
-   { "File manager", filemgr },
-   { "IRC", "hexchat" },
-   { "Media", "vlc" },
-   { "Office", "libreoffice" },
-   { "PDF", "evince" }
-}
-
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-				    { "system", mysystemmenu },
-				    { "apps", myappsmenu },
-                                    { "Terminal", terminal }
+                                    { "open terminal", terminal }
                                   }
                         })
 
@@ -303,7 +289,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "e",     function () awful.util.spawn(filemgr) end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(browser) end),
     awful.key({ modkey,           }, "g",     function () awful.util.spawn("gedit") end),
-    awful.key({ modkey,		  }, "k",     function () awful.util.spawn("dm-tool lock") end),
     awful.key({                   }, "Print", function () awful.util.spawn("gnome-screenshot -i") end),   
     awful.key({ modkey, "Shift"   }, "Left",  function () awful.util.spawn("xmms2 prev") end),
     awful.key({ }, "XF86AudioPrev", 	      function () awful.util.spawn("xmms2 prev") end),
@@ -536,7 +521,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("~/.xinitrc")
 
 -- Custom functions
--- Battery Info function
 function batteryInfo(adapter)
      spacer = " "
      local fcur = io.open("/sys/class/power_supply/"..adapter.."/energy_now")    
@@ -583,7 +567,6 @@ battery_timer:connect_signal("timeout", function()
 end)
 battery_timer:start()
 
--- Volume update function
 function update_volume(widget)
    local fd = io.popen("amixer sget Master")
    local status = fd:read("*all")
@@ -612,7 +595,6 @@ vol_timer = timer({ timeout = 1 })
 vol_timer:connect_signal("timeout", function () update_volume(volume_widget) end)
 vol_timer:start()
 
--- Network status update function
 function update_netstatus(widget)
 	local fd = io.popen("~/.config/awesome/net_test")
 	local status = fd:read()
@@ -626,7 +608,6 @@ net_timer = timer({ timeout = 5 })
 net_timer:connect_signal("timeout", function () update_netstatus(net_widget) end)
 net_timer:start()
 
--- Brightness update function (obsolete)
 function update_brightness(update)
 	--local mbfd = io.popen("/sys/class/backlight/intel_backlight/max_brightness")
 	local cbfd = io.popen("/sys/class/backlight/intel_backlight/brightness")
