@@ -1,4 +1,61 @@
-awesome-wm is the config file required for Awesome WM.
+# Linux Configuration Repository
 
-Files:
-rc.lua: Main config file for Awesome WM
+This repository contains ready-to-use Linux configurations, including aliases and ZSH configurations, to enhance your command-line experience and productivity.
+
+## Contents
+
+1. Bash Aliases
+2. ZSH Configuration
+3. Other Linux Configurations
+
+## Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/linux-configs.git
+   ```
+
+2. Copy the desired configuration files to your home directory:
+   ```
+   cp linux-configs/.bash_aliases ~/
+   cp linux-configs/.zshrc ~/
+   ```
+
+3. Source the files in your current shell session:
+   ```
+   source ~/.bash_aliases
+   source ~/.zshrc
+   ```
+
+## Features
+
+### Bash Aliases
+
+The `.bash_aliases` file includes a variety of useful aliases for:
+
+- Navigation (e.g., `..`, `...`, `~`)
+- File and directory management (e.g., `md`, `f`, `ff`)
+- System operations (e.g., `update`, `sysinfo`)
+- Network-related tasks (e.g., `myip`, `ports`)
+- And more!
+
+### ZSH Configuration
+
+The `.zshrc` file includes:
+
+- Oh My Zsh setup
+- Theme configuration
+- Plugin management
+- Custom prompt settings
+
+## Customization
+
+Feel free to modify these configurations to suit your needs. You can add new aliases, change ZSH themes, or include additional plugins as desired.
+
+## Contributing
+
+Contributions are welcome! If you have any useful configurations or improvements, please submit a pull request.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
