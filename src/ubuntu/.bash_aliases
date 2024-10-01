@@ -13,7 +13,7 @@ alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 alias rm='rm -I --preserve-root'
-alias df="df -Tha --total"
+# alias df="df -Tha --total"
 alias du="df -Tha --total"
 
 
@@ -64,10 +64,9 @@ alias sysreload="sudo systemctl reload"
 alias sysstatus="sudo systemctl status"
 alias sysenable="sudo systemctl enable"
 alias sysdisable="sudo systemctl disable"
-alias meminfo='free -m -l -t' # pass options to free
+alias meminfo='free -l -t' # pass options to free
 alias psmem='ps auxf | sort -nr -k 4' # get top process eating memory
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias pscpu='ps auxf | sort -nr -k 3' # get top process eating cpu
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 alias cpuinfo='lscpu' # Get server cpu info
-alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log' # get GPU ram on desktop / laptop
