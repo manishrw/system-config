@@ -1,8 +1,0 @@
-#!/bin/bash
-net_status=0
-for interface in $(ls /sys/class/net/ | grep -v lo);
-do
-if [[ $(cat /sys/class/net/$interface/carrier) -eq  "1"  ]]; then net_status=1; fi
-done
-if [[ $net_status -eq "1" ]]; then echo ON; else echo OFF; fi
-#if [[ $(cat /sys/class/net/wlp3s0/carrier) = 1 ]]; then echo ON; else echo OFF; fi
