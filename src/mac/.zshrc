@@ -80,6 +80,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 source ~/.bash_aliases
+source ~/.zsh_custom
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
