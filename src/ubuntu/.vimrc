@@ -1,7 +1,10 @@
 syntax on
 filetype on
 set noswapfile
+set cursorline
 set cursorcolumn
+highlight CursorLine ctermbg=LightGray cterm=NONE
+highlight CursorColumn ctermbg=LightGray cterm=NONE
 set number
 set expandtab
 set tabstop=4
