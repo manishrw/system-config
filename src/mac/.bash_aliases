@@ -13,11 +13,9 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias rm='rm -I --preserve-root'
+# alias rm='rm -I --preserve-root'
 # alias df="df -Tha --total"
 alias du="df -Tha --total"
-
-
 
 # Productivity aliases
 alias h="history"
@@ -83,3 +81,6 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias pscpu='ps auxf | sort -nr -k 3' # get top process eating cpu
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 alias cpuinfo='lscpu' # Get server cpu info
+
+# custom aliases
+alias python=python3
