@@ -13,15 +13,15 @@ alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 alias rm='rm -I --preserve-root'
-# alias df="df -Tha --total"
-alias du="df -Tha --total"
+alias dfroot='df -h | awk "NR==1 || \$NF==\"/\" || \$NF==\"/boot\" || \$NF==\"/extendedroot\""'
+# alias du="df -Tha --total"
 
 
 # Productivity aliases
 alias h="history"
 alias j="jobs -l"  # List all jobs
 alias now="date '+%Y-%m-%d %H:%M:%S'"
-alias ip="curl ifconfig.me"  # Get public IP address
+alias publicip="curl ifconfig.me"  # Get public IP address
 alias md="mkdir -p"
 alias vimrc="vim ~/.vimrc"
 alias bashrc="vim ~/.bashrc"
@@ -70,3 +70,6 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias pscpu='ps auxf | sort -nr -k 3' # get top process eating cpu
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 alias cpuinfo='lscpu' # Get server cpu info
+
+# Docker aliases
+alias dpsf='docker ps --format "{{.ID}} {{.Image}} {{.Status}} {{.Names}}"'
