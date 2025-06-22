@@ -1,7 +1,7 @@
 # src aliases
-alias home='cd ~'
-alias src='cd ~/workspace'
-alias cdgh='cd ~/workspace/github'
+alias home="cd $HOME"
+alias src="cd $HOME/src"
+alias cdgh="cd $HOME/src/github"
 
 # System aliases
 alias top10="du -ah . | sort -n -r | head -n 10"
@@ -74,4 +74,3 @@ alias cpuinfo='sysctl -n machdep.cpu.brand_string'
 
 # custom aliases
 alias python=python3
-alias ghc='github copilot'
