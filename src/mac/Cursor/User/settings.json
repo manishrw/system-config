@@ -1,0 +1,24 @@
+{
+    "window.commandCenter": 1,
+    "go.toolsManagement.autoUpdate": true,
+    "makefile.configureOnOpen": true,
+    "redhat.telemetry.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.tokenColorCustomizations": {},
+    "workbench.colorTheme": "JetBrains Darcula Theme",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme",
+    "go.alternateTools": {},
+    "go.coverOnSave": true,
+    "editor.minimap.enabled": true,
+    "go.coverOnSingleTestFile": true,
+    "go.coverageOptions": "showCoveredCodeOnly",
+    "git.autofetch": true,
+    "workbench.editor.enablePreview": false,
+    "testing.coverageToolbarEnabled": true,
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 20,
+    "jetbrainsKeymap.promptV3Features": false,
+}

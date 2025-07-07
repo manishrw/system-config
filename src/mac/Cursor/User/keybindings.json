@@ -1,0 +1,84 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "key": "cmd+alt+e"
+    },
+    {
+        "command": "workbench.action.openRecent",
+        "key": "cmd+alt+r"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.quickOpenPreviousEditor"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.quickOpen",
+        "when": "Go to file"
+    },
+    {
+        "key": "shift+shift",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+shift+a",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "cmd+alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+shift+o",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "cmd+f12",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "cmd+alt+l",
+        "command": "editor.action.formatDocument"
+    },
+    {
+        "key": "shift+f6",
+        "command": "editor.action.rename"
+    },
+    {
+        "key": "cmd+/",
+        "command": "editor.action.commentLine"
+    },
+    {
+        "key": "cmd+f8",
+        "command": "editor.debug.action.toggleBreakpoint"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.stepOver"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.stepInto"
+    },
+    {
+        "key": "shift+f8",
+        "command": "workbench.action.debug.stepOut"
+    },
+    {
+        "key": "cmd+d",
+        "command": "editor.debug.action.runToCursor"
+    },
+    {
+        "key": "cmd+shift+m",
+        "command": "workbench.actions.view.problems"
+    }
+]
