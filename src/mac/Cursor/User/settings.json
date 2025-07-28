@@ -13,12 +13,18 @@
     "go.alternateTools": {},
     "go.coverOnSave": true,
     "editor.minimap.enabled": true,
-    "go.coverOnSingleTestFile": true,
     "go.coverageOptions": "showCoveredCodeOnly",
     "git.autofetch": true,
     "workbench.editor.enablePreview": false,
-    "testing.coverageToolbarEnabled": true,
     "explorer.confirmDelete": false,
-    "editor.fontSize": 20,
+    "editor.fontSize": 18,
     "jetbrainsKeymap.promptV3Features": false,
+    "cursor.cpp.enablePartialAccepts": true,
+    "window.zoomLevel": 0,
+    "testing.coverageToolbarEnabled": true,
+    "testing.coverageBarThresholds": {
+        "red": 0,
+        "yellow": 60,
+        "green": 90
+    },
 }

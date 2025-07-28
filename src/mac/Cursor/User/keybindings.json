@@ -80,5 +80,73 @@
     {
         "key": "cmd+shift+m",
         "command": "workbench.actions.view.problems"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "cmd+shift+b",
+        "command": "editor.action.goToImplementation"
+    },
+    {
+        "key": "cmd+alt+b",
+        "command": "editor.action.goToTypeDefinition"
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "editor.action.referenceSearch.trigger"
+    },
+    {
+        "key": "cmd+shift+h",
+        "command": "editor.showCallHierarchy"
+    },
+    {
+        "key": "alt+space",
+        "command": "editor.action.peekDefinition"
+    },
+    {
+        "key": "cmd+shift+space",
+        "command": "editor.action.peekTypeDefinition"
+    },
+    {
+        "key": "cmd+=",
+        "command": "workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+-",
+        "command": "workbench.action.zoomOut"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "cmd+alt+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+alt+shift+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+shift+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "go.toggle.test.file"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "go.test.coverage"
     }
 ]
